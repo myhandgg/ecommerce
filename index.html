@@ -9,7 +9,6 @@
     <!-- Links -->
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- Fonts -->
@@ -22,6 +21,20 @@
 </head>
 <body>
     <div class="overlay"></div>
+    <div class="left-side-overlay">
+        <i class="fa-solid fa-xmark xmark"></i>
+        <div class="next-prev">
+            <i class="fa-solid fa-angle-left prev"></i>
+            <img src="images/image-product-1.jpg" alt="Product 1" class="product">
+            <i class="fa-solid fa-angle-right next"></i>
+        </div>
+        <div class="thumbnail-images">
+            <img src="images/image-product-1-thumbnail.jpg" alt="Product 1" class="active">
+            <img src="images/image-product-2-thumbnail.jpg" alt="Product 2">
+            <img src="images/image-product-3-thumbnail.jpg" alt="Product 3">
+            <img src="images/image-product-4-thumbnail.jpg" alt="Product 4">
+        </div>
+    </div>
     <header>
         <div class="left-side">
             <img src="images/icon-menu.svg" alt="" class="bars">
@@ -36,14 +49,22 @@
             </ul>
         </div>
         <div class="right-side">
-            <img src="images/icon-cart.svg" alt="cart" style="cursor: pointer">
+            <img src="images/icon-cart.svg" alt="cart" class="cart" style="cursor: pointer">
+            <div class="cart-container">
+                <p>Cart</p>
+                <p>Your cart is empty.</p>
+            </div>
             <img src="images/image-avatar.png" alt="avatar" style="cursor: pointer">
         </div>
     </header>
     <hr>
-    <section class="container">
+    <section>
         <div class="left-side">
-            <img src="images/image-product-1.jpg" alt="Product 1">
+            <div class="next-prev">
+                <i class="fa-solid fa-angle-left prev"></i>
+                <img src="images/image-product-1.jpg" alt="Product 1" class="product">
+                <i class="fa-solid fa-angle-right next"></i>
+            </div>
             <div class="thumbnail-images">
                 <img src="images/image-product-1-thumbnail.jpg" alt="Product 1" class="active">
                 <img src="images/image-product-2-thumbnail.jpg" alt="Product 2">
@@ -55,8 +76,7 @@
             <p class="title">Sneaker Company</p>
             <h1>Fall Limited Edition<br> Sneakers</h1>
             <p>hese low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer. </p>
-            <h2>$125.00 <span>50%</span></h2>
-            <del>$250.00</del>
+            <h2>$125.00 <span>50%</span><del>$250.00</del></h2>
             <div class="buy-box">
                 <div class="number-of-products">
                     <img src="images/icon-minus.svg" alt="minus" class="minus">
@@ -69,8 +89,6 @@
             </div>
         </div>
     </section>
-    <script src="js/cdnjs.cloudflare.com_ajax_libs_popper.js_1.11.0_umd_popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
