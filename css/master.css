@@ -73,7 +73,8 @@ header .left-side ul li {
 }
 
 header .left-side ul li:hover {
-    border-bottom: 1px solid var(--Orange);
+    border-bottom: 2px solid var(--Orange);
+    color: var(--Black);
 }
 
 header .left-side ul i {
@@ -142,7 +143,7 @@ header .right-side img:last-child:hover {
 
 section {
     display: flex !important;
-    gap: 100px;
+    gap: 50px;
     align-items: center;
     margin-top: 100px;
 }
@@ -164,6 +165,11 @@ section .left-side .thumbnail-images {
 section .left-side .thumbnail-images img {
     width: calc(400px / 4);
     margin: 0 20px 0 0;
+    transition: .3s;
+}
+
+section .left-side .thumbnail-images img:hover {
+    opacity: .5;
 }
 
 section .right-side .title {
@@ -186,7 +192,7 @@ section .right-side p:not(.title) {
 section .right-side h2 {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     font-weight: bold;
 }
 
@@ -206,35 +212,49 @@ section .right-side del {
 section .right-side .buy-box {
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 section .right-side .buy-box .number-of-products {
-    display: flex;
-} 
-
-section .right-side .buy-box .number-of-products div {
-    width: 50px;
-    height: 50px;
     background-color: var(--Light-grayish-blue);
     color: var(--Orange);
+    padding: 10px;
     margin: 5px;
+    gap: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
     font-weight: bold;
-    cursor: pointer;
 }
 
-section .right-side .buy-box .number-of-products .number {
-    color: var(--Black);
-    cursor: auto;
+section .right-side .buy-box .number-of-products .minus , 
+section .right-side .buy-box .number-of-products .plus  {
+    cursor: pointer;
+    padding: 10px;
+    transition: .3s;
+}
+
+section .right-side .buy-box .number-of-products .minus:hover , 
+section .right-side .buy-box .number-of-products .plus:hover {
+    opacity: .5;
+}
+
+section .right-side .buy-box .number-of-products p {
+    margin: 0;
 }
 
 section .right-side .buy-box .add-to-cart {
     background-color: var(--Orange);
-    width: 200px;
+    width: 250px;
     padding: 10px;
     text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 19px 15px -16px var(--Orange);
+    transition: .3s;
+}
+
+section .right-side .buy-box .add-to-cart:hover {
+    opacity: .5;
 }
 
 section .right-side .buy-box .add-to-cart p {
@@ -242,4 +262,25 @@ section .right-side .buy-box .add-to-cart p {
     color: var(--White);
 }
 
+section .right-side .buy-box .add-to-cart p img {
+    filter: brightness(3);
+    margin-right: 10px;
+    width: 20px;
+}
+
+@media (max-width:1024px) {
+    section .left-side > img {
+        width: 300px;
+    }
+    section .left-side .thumbnail-images img {
+        width: calc(400px / 6.5);
+    }
+}
+
 /* End Section */
+/* JS */
+
+.active {
+    opacity: .5;
+    border: 2px solid var(--Orange);
+}
