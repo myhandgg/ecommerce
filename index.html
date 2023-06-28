@@ -25,10 +25,10 @@
         <i class="fa-solid fa-xmark xmark"></i>
         <div class="next-prev">
             <i class="fa-solid fa-angle-left prev"></i>
-            <img src="images/image-product-1.jpg" alt="Product 1" class="product">
+            <img src="images/image-product-1.jpg" alt="Product 1" class="product" style="cursor: auto;">
             <i class="fa-solid fa-angle-right next"></i>
         </div>
-        <div class="thumbnail-images">
+        <div class="thumbnail-images" id="popup-thumbnails">
             <img src="images/image-product-1-thumbnail.jpg" alt="Product 1" class="active">
             <img src="images/image-product-2-thumbnail.jpg" alt="Product 2">
             <img src="images/image-product-3-thumbnail.jpg" alt="Product 3">
@@ -61,15 +61,15 @@
     <section>
         <div class="left-side">
             <div class="next-prev">
-                <i class="fa-solid fa-angle-left prev"></i>
+                <i class="fa-solid fa-angle-left prev" onclick="mobileMoveLeft()"></i>
                 <img src="images/image-product-1.jpg" alt="Product 1" class="product">
-                <i class="fa-solid fa-angle-right next"></i>
+                <i class="fa-solid fa-angle-right next" onclick="mobileMoveRight()"></i>
             </div>
-            <div class="thumbnail-images">
-                <img src="images/image-product-1-thumbnail.jpg" alt="Product 1" class="active">
-                <img src="images/image-product-2-thumbnail.jpg" alt="Product 2">
-                <img src="images/image-product-3-thumbnail.jpg" alt="Product 3">
-                <img src="images/image-product-4-thumbnail.jpg" alt="Product 4">
+            <div class="thumbnail-images" id="main-thumbnails">
+                <img src="images/image-product-1-thumbnail.jpg" alt="Product 1" class="product-one active">
+                <img src="images/image-product-2-thumbnail.jpg" alt="Product 2" class="product-two">
+                <img src="images/image-product-3-thumbnail.jpg" alt="Product 3" class="product-three">
+                <img src="images/image-product-4-thumbnail.jpg" alt="Product 4" class="product-four">
             </div>
         </div>
         <div class="right-side">

@@ -47,7 +47,7 @@ body {
 
 .left-side-overlay .xmark {
     position: absolute;
-    right: 10px;
+    right: 0;
     bottom: calc(100% + 10px);
     font-size: 25px;
     color: var(--Orange);
@@ -211,6 +211,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
     margin-top: 100px;
     padding: 0 50px 30px 50px;
 }
@@ -277,7 +278,7 @@ section .left-side .thumbnail-images img:last-child ,
 
 section .left-side .thumbnail-images img:hover ,
 .left-side-overlay .thumbnail-images img:hover {
-    opacity: .5;
+    opacity: 75%;
 }
 
 section .right-side .title {
@@ -338,9 +339,10 @@ section .right-side .buy-box .number-of-products {
     color: var(--Orange);
     padding: 10px;
     margin: 5px;
-    gap: 50px;
+    width: 200px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-weight: bold;
 }
 
@@ -483,7 +485,7 @@ section .right-side .buy-box .add-to-cart p img {
 /* JS */
 
 .active {
-    opacity: .5;
+    opacity: 75%;
     border: 2px solid var(--Orange);
 }
 
