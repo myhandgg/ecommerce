@@ -179,3 +179,33 @@ minus.onclick = function() {
 plus.onclick = function() {
     amount.innerHTML = +amount.innerHTML + 1
 }
+
+// cart products
+
+let emptyMessage = document.querySelector(".empty")
+
+let cartInfo = document.querySelector(".info")
+let checkout = document.querySelector(".checkout")
+let deleteBtn = document.querySelector(".delete")
+
+let price = document.querySelector(".price p")
+let pieces = document.querySelector(".price span")
+let sumOfProducts = document.querySelector(".price bold")
+
+let btn = document.querySelector(".add-to-cart")
+
+btn.onclick = () => {
+    if (amount.textContent !== "0") {
+        emptyMessage.style.display = "none"
+        cartInfo.style.display = "flex"
+        checkout.style.display = "block"
+        pieces.textContent = amount.textContent
+        sumOfProducts.textContent = `$${parseInt(price.textContent.slice(1)) * pieces.textContent}`
+    }
+}
+
+deleteBtn.onclick = () => {
+    cartInfo.style.display = "none"
+    checkout.style.display = "none"
+    emptyMessage.style.display = "block"
+}
